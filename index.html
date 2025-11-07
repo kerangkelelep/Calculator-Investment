@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Investasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h2>Kalkulator Investasi</h2>
+        <p>Hitung potensi pertumbuhan investasi Anda.</p>
+
+        <form id="invest-form">
+            <div class="form-group">
+                <label for="principal">Modal Awal (Rp)</label>
+                <input type="number" id="principal" value="1000000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="monthly">Setoran Rutin Bulanan (Rp)</label>
+                <input type="number" id="monthly" value="500000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rate">Estimasi Bunga (% per Tahun)</label>
+                <input type="number" id="rate" value="8" required>
+            </div>
+
+            <div class="form-group">
+                <label for="years">Jangka Waktu (Tahun)</label>
+                <input type="number" id="years" value="10" required>
+            </div>
+
+            <button type="submit" class="calculate-btn">Hitung</button>
+        </form>
+
+        <div id="result-container" class="hidden">
+            <h3>Hasil Investasi Anda:</h3>
+            
+            <div class="result-item">
+                <p>Total Hasil Investasi</p>
+                <span id="result-total">Rp 0</span>
+            </div>
+
+            <div class="result-item">
+                <p>Total Modal Disetor</p>
+                <span id="result-principal">Rp 0</span>
+            </div>
+            
+            <div class="result-item interest">
+                <p>Total Bunga Didapat</p>
+                <span id="result-interest">Rp 0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
